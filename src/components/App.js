@@ -22,7 +22,7 @@ const Auth = () => {
   const { isAuthenticated, toggleAuth } = useContext(AuthContext);
 
   return (
-    <div className="auth-container">
+    <div>
       <label>
         <input
           type="checkbox"
@@ -32,10 +32,10 @@ const Auth = () => {
         I am not a robot
       </label>
 
-      <p>
+      <p className="authText">
         {isAuthenticated
-          ? "You are authenticated!"
-          : "You are not authenticated."}
+          ? "you are authenticated"
+          : "you are not authenticated"}
       </p>
     </div>
   );
@@ -46,7 +46,6 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
         <AuthProvider>
-        <h1>useContext Authentication Demo</h1>
         <Auth />
       </AuthProvider>
     </div>
